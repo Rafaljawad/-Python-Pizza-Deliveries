@@ -63,4 +63,38 @@ else:
 
 
 
+################ANOTHER SHORT CODE ########################
 
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")# choose the size to get your bill if you choose small ,you will pay $15, if you pick out medium , you have to pay $20. Finally if you choose larg , yoou will pay $25
+add_one_topping = input("Do you want to add extra one topping? Y or N ")#if you add more one topping , you will charged extra $2 for small size and extra $3 for larg and meduim
+extra_cheese = input("Do you want extra cheese? Y or N ")# if you want to add extra cheese , you will charged $1 for all sizes
+
+if size=="S":
+  bill=15
+elif size=="M":
+  bill=20
+elif size=="L":
+  bill=25
+
+if size=="S":
+  if add_one_topping=="Y":
+    bill+=2
+    if extra_cheese=="Y":
+        bill+=1
+        print(f"your total bill is ${bill}")
+    else:
+        print(f"your total bill is ${bill}")
+  else:
+      print(f"your total bill is ${bill}")
+      
+elif size=="M" or size=="L":
+  if add_one_topping=="Y":
+    bill+=3
+    if extra_cheese=="Y":
+      bill+=1
+      print(f"your total bill is ${bill}")
+    else:
+      print(f"your total bill is ${bill}")
+  else:
+      print(f"your total bill is ${bill}")
